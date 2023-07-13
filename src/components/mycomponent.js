@@ -1,12 +1,17 @@
-import * as React from 'react'
-import { title } from './my-component.module.css'
+import React from 'react'
+import backgroundImage from '../images/retrosupply-jLwVAUtLOAQ-unsplash.jpg'
 
 const MyComponent = () => {
-  return (
-    <h1 className={title}>
-      Super Sweet Title Page
-    </h1>
-  )
-}
+  const divStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    width: '100%',
+    height: '100%' // Set the desired height
+  };
 
-export default MyComponent
+  return <div style={divStyle}></div>;
+};
+
+export default MyComponent;
