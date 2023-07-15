@@ -3,11 +3,16 @@ import Layout from '../../components/layout'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Seo from '../../components/seo'
+import {container} from '../blog/blog.module.css' 
 
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <div>
+      <Layout pageTitle={data.mdx.frontmatter.title}>
+      {children}
+      </Layout>
+      <div className={container}>
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <GatsbyImage
       image={image}
@@ -19,8 +24,10 @@ const BlogPost = ({ data, children }) => {
           {data.mdx.frontmatter.hero_image_credit_text}
         </a>
       </p>
-      {children}
-    </Layout>
+      </div>
+    </div>
+    
+    
   )
 }
 

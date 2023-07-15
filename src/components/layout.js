@@ -9,7 +9,7 @@ import {
     navLinkText,
     siteTitle,
     headerLogo,
-    logo} from './layout.module.css'
+    logo,home,blog,about} from './layout.module.css'
 
 const Layout = ({ pageTitle, children }) => {
 
@@ -24,6 +24,7 @@ const Layout = ({ pageTitle, children }) => {
   `)
 
   return (
+    <div>
         <div className={topWrapper}>
           <header>
             <div className={container}>
@@ -35,13 +36,14 @@ const Layout = ({ pageTitle, children }) => {
                 <h1 className={siteTitle}>{data.site.siteMetadata.title}</h1>
               </div>
               <div className={navLinks}>
-                <li className={navLinkItem}><Link to="/" className={navLinkText}>Home</Link></li>
-                <li className={navLinkItem}><Link to="/about" className={navLinkText}>About</Link></li>
-                <li className={navLinkItem}><Link to="/blog" className={navLinkText}>Blog</Link></li>
+                <li className={navLinkItem}><Link to="/" className={navLinkText}><button className={home}>Home</button></Link></li>
+                <li className={navLinkItem}><Link to="/blog" className={navLinkText}><button className={blog}>Blog</button></Link></li>
+                <li className={navLinkItem}><Link to="/about" className={navLinkText}><button className={about}>About</button></Link></li>
               </div>
             </div>
           </header>
         </div>
+      </div>   
   )
 }
 

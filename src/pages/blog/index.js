@@ -2,23 +2,29 @@ import * as React from 'react'
 import Layout from '../../components/layout'
 import { Link, graphql } from 'gatsby'
 import Seo from '../../components/seo'
+import {container} from '../blog/blog.module.css'
 
 const BlogPage = ({data}) => {
   return (
-    <Layout pageTitle="My Blog Posts">
+    <div>
+      <Layout pageTitle="My Blog Posts">
+      </Layout>
+      <div className={container}>
       {
-        data.allMdx.nodes.map((node) => (
-          <article key={node.id}>
-            <h2>
-              <Link to={`/blog/${node.frontmatter.slug}`}>
-                {node.frontmatter.title}
-              </Link>
-            </h2>
-            <p>Posted: {node.frontmatter.date}</p>
-          </article>
-        ))
-      }
-    </Layout>
+      data.allMdx.nodes.map((node) => (
+        <article key={node.id}>
+          <h2>
+            <Link to={`/blog/${node.frontmatter.slug}`}>
+              {node.frontmatter.title}
+            </Link>
+          </h2>
+          <p>Posted: {node.frontmatter.date}</p>
+        </article>
+      ))
+    }
+      </div>
+    </div>
+    
   )
 }
 

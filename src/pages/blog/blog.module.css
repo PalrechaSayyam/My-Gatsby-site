@@ -1,10 +1,11 @@
 .topWrapper {
-  background-color: #26d0c9;
+  background-color: rgb(223, 223, 223);
   font-family: "Lucida Grande";
   margin-bottom: 30px;
 }
 
 .container {
+  text-align: center;
   width: 1450px;
   padding: 0 15px;
   margin: 0 auto;
@@ -26,7 +27,7 @@ header {
 }
 
 .siteTitle {
-  color: #fff;
+  color: rgb(20, 18, 18);
   float: right;
   line-height: 50px;
 }
@@ -44,29 +45,4 @@ header {
 
 .navLinkText {
   color: black;
-}
-
-.about {
-  margin-right: 20px;
-  padding: 12px 24px;
-  opacity: 0.8;
-  border-radius: 4px;
-  background-color: #3b5998;
-  color:white;
-}
-
-.blog {
-  padding: 12px 24px;
-  opacity: 0.8;
-  border-radius: 4px;
-  background-color: #55acee;
-  color:white;
-}
-
-.home {
-  padding: 12px 24px;
-  opacity: 0.8;
-  border-radius: 4px;
-  background-color: lightgreen;
-  color:white;
 }
