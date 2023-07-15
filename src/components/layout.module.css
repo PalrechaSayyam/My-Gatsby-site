@@ -1,31 +1,47 @@
+.topWrapper {
+  background-color: rgb(223, 223, 223);
+  font-family: "Lucida Grande";
+  margin-bottom: 30px;
+}
+
 .container {
-    margin: auto;
-    max-width: 500px;
-    font-family: sans-serif;
-  }
+  width: 1450px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 
-  .heading {
-    color: rebeccapurple;
-  }
-  .nav-links {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-  }
-  .nav-link-item {
-    padding-right: 2rem;
-  }
-  .nav-link-text {
-    color: black;
-  }
+header {
+  height: 105px;
+  width: 100%;
+}
 
-  .browse {
-    font-size: small;
-  }
+.header-logo {
+  float: left;
+}
 
-  .siteTitle {
-    font-size: 3rem;
-    color: gray;
-    font-weight: 700;
-    margin: 3rem 0;
-  }
+.logo {
+  float: left;
+  padding: 10px 10px;
+  margin: 15px 15px
+}
+
+.siteTitle {
+  color: rgb(20, 18, 18);
+  float: right;
+  line-height: 50px;
+}
+
+.navLinks {
+  float: right;
+  display: flex;
+  list-style: none;
+  line-height: 90px;
+}
+
+.navLinkItem {
+  padding-right: 3rem;
+}
+
+.navLinkText {
+  color: black;
+}
